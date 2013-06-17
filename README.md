@@ -19,6 +19,7 @@ Prepping .CSVs For Use With py_recon
 3. Delete the header.
 
 4. Delete all blank lines.  To do this,  
+
     *Press Ctl+A.  
 
     *Press Ctl+G.  
@@ -31,7 +32,8 @@ Prepping .CSVs For Use With py_recon
     
 	*Select “Entire Row” and click “OK.”  
     
-5. Save the sheet as a .CSV file.  To do this, 
+5. Save the sheet as a .CSV file.  To do this,  
+
     *Select “File,” then “Save As.”  
 
 	*Select “CSV (comma delimited)” from the “Save as type” drop-down menu.  
@@ -48,12 +50,14 @@ Prepping .CSVs For Use With py_recon
     
  	*Click “OK.”  
      
-6. Repeat steps 2-5 for the second set of data.  Two things to look out for:
-    * It is very important that the names of the companies are in column A and the amounts to be reconciled are column B, so you might have to copy the columns one at a time to the second spreadsheet.  
+6. Repeat steps 2-5 for the second set of data.  Two things to look out for:  
+
+    *It is very important that the names of the companies are in column A and the amounts to be reconciled are column B, so you might have to copy the columns one at a time to the second spreadsheet.  
      
-    * It is very important that you save the second set of data with a different name than the first set.  
+    *It is very important that you save the second set of data with a different name than the first set.  
     
-7. Check to make sure your .CSVs are properly formatted.  To do this:
+7. Check to make sure your .CSVs are properly formatted.  To do this:  
+
     *Open the folder where you saved your .CSVs  
 
 	*Right click the first one, select “Open with,” and pick “Notepad.”  
@@ -68,7 +72,8 @@ Prepping .CSVs For Use With py_recon
     
     *Press “Shift+Menu+W+Enter.”  “Menu” is the key next to the right-hand Windows button on your keyboard.  
 
-9. Run py_recon on your .CSVs.  To do this:
+9. Run py_recon on your .CSVs.  To do this:  
+
     *Type “python3 pyrecon.py”  
 
 	*Type the name of your first CSV, i.e. “SetA.csv”  
