@@ -1,8 +1,9 @@
 class compdict():
-    def __init__ (self, a, b):
+    def __init__ (self, a, b, outfile):
         self._adict = a
         self._bdict = b
         self._cdict = {}
+        self._outfile = outfile
         
     def compare(self):
         for key in self._adict.keys():
@@ -19,15 +20,21 @@ class compdict():
                         else:
                             self._cdict[key] = []
                             self._cdict[key].append(item)
-        #print self._cdict
         items = []
         for key in self._cdict.keys():
-            #print(key)
             items.append(key)
         items.sort()
-        out = open('output.txt','w+')
+        
+        #This would ordinarily be handled by a separate save method, but there's
+        #no real reason to do it here since we're not doing anything with the data
+        #other than comparing it for immediate output to a log.  If pyrecon is
+        #expanded to include further functionality, compdict.compare should
+        #be changed to return an ordered list of the format
+        #[(items[i]),(self._cdict[i])...(items[i+n]),(self._cdict[i+n])]
+        #and a write method/reportwriter class should be created to handle writing 
+        #different kinds of reports.  compdict should also be amended to not require
+        #an outfile parameter.
+        
+        out = open(self._outfile,'w+')
         for i in items:
            out.write("%s, %s\n" % (i, self._cdict[i]))
-                
-        
-                        

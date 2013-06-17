@@ -8,14 +8,17 @@ import sys
 from parser import *
 from compdict import *
 
-def main(args):
+def main(argv):
+    if len(argv) < 3:
+        print('Usage: python3 pyrecon.py CSV1 CSV2 OUTFILE')
+    
     AParser = parser(sys.argv[1])
     BParser = parser(sys.argv[2])
     A = AParser.parse()
     B = BParser.parse()
-    CompDict = compdict(A,B)
-    C = CompDict.compare()
-    #print(C)
+    CompDict = compdict(A,B,sys.argv[3])
+    CompDict.compare()
+    print("Reconciliation logged to %s." % (sys.argv[3]))
     
 if __name__ == "__main__":
     main(sys.argv)
