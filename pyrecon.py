@@ -15,8 +15,11 @@ def main(argv):
     AParser = parser(sys.argv[1])
     BParser = parser(sys.argv[2])
     A = AParser.parse()
+    #print(A)
     B = BParser.parse()
+    #print(B)
     CompDict = compdict(A,B,sys.argv[3])
+    #CompDict = compdict(B,A,sys.argv[3])
     CompDict.compare()
     print("Reconciliation logged to %s." % (sys.argv[3]))
     

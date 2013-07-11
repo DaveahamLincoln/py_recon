@@ -10,6 +10,9 @@ class compdict():
             if key in self._bdict.keys():
                 alist = self._adict[key]
                 blist = self._bdict[key]
+                #print(alist)
+                #print(blist)
+                #print()
                 for item in alist:
                     if item in blist:
                         pass
@@ -37,4 +40,5 @@ class compdict():
         
         out = open(self._outfile,'w+')
         for i in items:
-           out.write("%s, %s\n" % (i, self._cdict[i]))
+            #print(i)
+            out.write("%s, %s\n" % (i, self._cdict[i]))
