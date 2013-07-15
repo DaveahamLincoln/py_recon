@@ -35,23 +35,7 @@ Prepping .CSVs For Use With py_recon
     
 	*Select “Entire Row” and click “OK.”
     
-5. Sanitize the data 
-    
-    *(Please note that this is a stopgap to handle an error which I'm working on fixing programatically)
-    
-    *Press Ctl + A.
-
-    *Press Ctl + F.
-    
-    *Select the "Replace" tab.
-    
-    *Enter "," (without quotes) in the "Find what:" field.
-    
-    *Select "Replace All."
-    
-    *Press Ok, then close out of the "Find and Replace" dialog.
-    
-6. Save the sheet as a .CSV file.  To do this,  
+5. Save the sheet as a .CSV file.  To do this,  
 
     *Select “File,” then “Save As.”  
 
@@ -69,13 +53,13 @@ Prepping .CSVs For Use With py_recon
     
  	*Click “OK.”  
      
-7. Repeat steps 2-5 for the second set of data.  Two things to look out for:  
+6. Repeat steps 2-5 for the second set of data.  Two things to look out for:  
 
     *It is very important that the names of the companies are in column A and the amounts to be reconciled are column B, so you might have to copy the columns one at a time to the second spreadsheet.  
      
     *It is very important that you save the second set of data with a different name than the first set.  
     
-8. Check to make sure your .CSVs are properly formatted.  To do this:  
+7. Check to make sure your .CSVs are properly formatted.  To do this:  
 
     *Open the folder where you saved your .CSVs  
 
@@ -87,11 +71,11 @@ Prepping .CSVs For Use With py_recon
     
     *Check your other .CSV.  If both .CSVs are properly formatted, move on to step 8.  
 
-9.  Open the folder you’re working in in the command line.  To do this:
+8.  Open the folder you’re working in in the command line.  To do this:
     
     *Press “Shift+Menu+W+Enter.”  “Menu” is the key next to the right-hand Windows button on your keyboard.  
 
-10. Run py_recon on your .CSVs.  To do this:  
+9. Run py_recon on your .CSVs.  To do this:  
 
     *Type “python3 pyrecon.py”  
 
@@ -107,6 +91,6 @@ Prepping .CSVs For Use With py_recon
     
     *When py_recon has finished reconciling your .CSV files, a message will appear on the screen that says “Reconciliation has been logged to <your log name>.”  At this point it is safe to exit the cmd window.  
     
-11. At this point you can open/print your log file.  This log contains all items whose names appear in both columns and whose amounts do not match.   Items which only exist in one column are not logged.
+10. At this point you can open/print your log file.  This log contains all items whose names appear in both columns and whose amounts do not match.   Items which only exist in one column are not logged.
 
-12. If the log is a jumbled mess, open it in WordPad instead of Notepad.
+11. If the log is a jumbled mess, open it in WordPad instead of Notepad.
